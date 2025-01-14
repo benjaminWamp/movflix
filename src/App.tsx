@@ -1,20 +1,20 @@
-import { useState } from "react";
+import React from "react";
+import { Routes, Route } from "react-router";
+import Navbar from "./components/navbar";
+import MoviesList from "./MoviesList";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <Navbar />
+      <div>
+        <Routes>
+          <Route index element={<MoviesList />} />
+          <Route path="movie/:id" element={<MoviesList />} />
+        </Routes>
       </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
     </>
   );
-}
+};
 
 export default App;

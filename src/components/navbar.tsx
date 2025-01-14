@@ -11,6 +11,9 @@ const navbar = () => {
         <NavLink to="/" className={({ isActive }) => (isActive ? "text-sky-400" : "")}>
           Liste des films
         </NavLink>
+        <NavLink to="/search" className={({ isActive }) => (isActive ? "text-sky-400" : "")}>
+          Rechercher un film
+        </NavLink>
         <NavLink to="/movie/1" className={({ isActive }) => (isActive ? "text-sky-400" : "")}>
           Liste de souhait
         </NavLink>

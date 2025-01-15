@@ -1,0 +1,6 @@
+.containerMovies {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  padding: 10px 0;
+  gap: 25px;
+}
